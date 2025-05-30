@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+
+}
+
+html {
+    scroll-behavior: smooth;
+
+
+}
+
+
+.button>img {
+    width: 40px;
+}
+
+
+
+
+
+
+section {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./imgs/ui/background.svg);
+    background-size: cover;
+
+    >nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+        background: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+
+        .logo {
+            font-size: 35px;
+            color: #c72092;
+            margin: 5px 0;
+            cursor: pointer;
+            position: relative;
+            left: 4px;
+        }
+
+        span {
+            color: #6c14d0;
+            text-decoration: underline;
+        }
+
+        ul {
+            list-style: none;
+
+            >li {
+                display: inline-block;
+                list-style: none;
+                margin: 5px 15px;
+            }
+
+            >li>a {
+                text-decoration: none;
+                color: black;
+                transition: 0.2s;
+
+                &:hover {
+                    color: #c72092;
+                }
+            }
+        }
+
+        >.icon {
+            display: flex;
+            max-width: 10%;
+
+            svg {
+                margin: 0 4px;
+                height: 30px;
+                cursor: pointer;
+                transition: 0.3s;
+
+                &:hover {
+                    fill: #c72092;
+                }
+            }
+        }
+    }
+
+    .main {
+        backdrop-filter: blur(2px);
+
+        .main_content {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+
+            .main_text {
+                h1 {
+                    font-size: 90px;
+                    line-height: 70px;
+                    font-family: 'Times New Roman', Times, serif;
+                    background: linear-gradient(to right, #c72092, #6c14d0);
+                    -webkit-background-clip: text;
+                    background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    position: relative;
+                    top: 45px;
+                    left: 5%;
+
+                    span {
+                        font-size: 70px;
+                        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                        background: linear-gradient(to right, #c72092, #6c14d0);
+                        -webkit-background-clip: text;
+                        background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                }
+
+                p {
+                    width: 600px;
+                    text-align: justify;
+                    line-height: 21px;
+                    position: relative;
+                    top: 85px;
+                    left: 5%;
+                }
+            }
+
+            .main_image>img {
+                width: 700px;
+                transform: scaleX(-1);
+                position: relative;
+                left: 10px;
+                top: 200px;
+            }
+        }
+
+        .social_icon {
+            position: absolute;
+            top: 60%;
+            left: 98%;
+            transform: translate(-50%, -50%);
+            font-size: 40px;
+
+            .redes {
+                width: 40px;
+                height: 40px;
+                cursor: pointer;
+                transition: 0.3s;
+            }
+
+            &:hover {
+                fill: #c72092;
+            }
+        }
+
+        .button {
+            position: absolute;
+            left: 9%;
+            padding: 10px 20px;
+            border-radius: 30px;
+            background: linear-gradient(to right, #c72092, #6c14d0);
+
+            a {
+                font-size: 20px;
+                color: white;
+                text-decoration: none;
+            }
+
+            svg {
+                transition: 0.3s;
+            }
+
+            &:hover svg {
+                fill: white;
+                transform: translateX(8px);
+            }
+        }
+    }
+}
+
+/*==============================================================PRODUCTS=============================================================*/
+/*==================================================================================================================================*/
+
+.products {
+    width: 100%;
+    height: 140vh;
+    padding: 25px 0;
+
+    & h1 {
+        margin: 35px;
+        font-size: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        background: linear-gradient(to right, #c72092, #6c14d0);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    >.box {
+        width: 90%;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 25px 0;
+
+        >.card {
+            width: 290px;
+            height: 400px;
+            box-shadow: 0 0 8px #6c14d0;
+            border-radius: 5px;
+            text-align: center;
+            padding: 10px 20px;
+            background: white;
+
+            >.small_card {
+                display: flex;
+                flex-flow: column;
+                position: absolute;
+                margin: 10px 0;
+                transform: translateX(-20px);
+                transition: .3s;
+                opacity: 0;
+
+                >svg {
+
+                    backdrop-filter: blur(0px);
+                    border-radius: 5px;
+                    font-size: 18px;
+                    margin: 2px;
+                    line-height: 40px;
+                    border: 2px solid grey;
+                    transition: 0.5s ease;
+                    transition: backdrop-filter 0.5s ease, fill 0.5s;
+
+                }
+
+                >svg:hover {
+                    fill: #c72092;
+                }
+
+            }
+
+
+            >.image {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                >img {
+                    width: 225px;
+                    height: 150px;
+                    margin: 15px 0px;
+                    transition: 0.3s;
+                    border-radius: 8px;
+                }
+
+                >img:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            >.products_text {
+
+
+
+                >h2 {
+                    font-size: 30px;
+                    margin-top: 15px;
+                    ;
+                }
+
+                >p {
+                    color: grey;
+                    line-height: 21px;
+                    margin: 8px 0;
+                }
+
+                >h3 {
+                    margin: 5px 0;
+                    ;
+                }
+
+            }
+
+            >.products_star {
+                >svg {
+                    fill: gold;
+                    margin-bottom: 19px;
+                    cursor: pointer;
+                    filter: drop-shadow(0 0 1px crimson);
+                }
+
+                >.svg-empty {
+                    fill: rgb(255, 255, 255);
+                    margin-bottom: 19px;
+                    cursor: pointer;
+                    filter: drop-shadow(0 0 1px gold);
+                }
+            }
+
+            >.btn {
+                text-decoration: none;
+                color: white;
+                background: linear-gradient(to right, #c72092, #6c14d0);
+                padding: 10px 20px;
+                border-radius: 10px;
+            }
+
+        }
+
+        .card:hover .small_card {
+            opacity: 1;
+            transition: 0.5s ease;
+            transform: translateX(-10px);
+            cursor: pointer;
+            z-index: 50;
+
+            >svg{
+                
+                backdrop-filter: blur(23px);
+            }
+            
+
+        }
+    }
+}
