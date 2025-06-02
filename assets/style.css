@@ -23,6 +23,7 @@ html {
 
 
 
+
 section {
     width: 100%;
     height: 100vh;
@@ -158,7 +159,7 @@ section {
                 transition: 0.3s;
             }
 
-            &:hover {
+            & svg:hover {
                 fill: #c72092;
             }
         }
@@ -449,25 +450,471 @@ section {
 
         }
     }
-    .about_btn{
+
+    .about_btn {
         color: black;
         border-radius: 12px;
         background-color: none;
         position: relative;
         top: 20%;
         left: 50%;
-        transform: translate(-50%,-50%);
+        transform: translate(-50%, -50%);
         padding: 10px 25px;
-        border:2px solid #c72092;
+        border: 2px solid #c72092;
         text-decoration: none;
         box-shadow: 0 0 8px #c72092;
         transition: 0.5s;
 
-        
+
     }
-    .about_btn:hover{
+
+    .about_btn:hover {
         border: 2px solid transparent;
         background: #6c14d0;
         color: white;
     }
+}
+
+
+/*==============================================================REVIEW=============================================================*/
+/*==================================================================================================================================*/
+
+.review {
+    width: 100%;
+    height: 100vh;
+    padding-top: 80px;
+
+    >h1 {
+        font-size: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 30px;
+        text-transform: uppercase;
+
+        >span {
+            background: linear-gradient(to right, #c72092, #6c14d0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-left: 15px;
+        }
+    }
+
+    >.review_box {
+        width: 95%;
+        position: relative;
+        top: 7%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        /*POSIBLE SOLUCION PARA LOS COMENTARIOS WRAP DE POLLO*/
+
+        >.review_card {
+            background-color: rgb(247, 237, 224);
+            width: 450px;
+            border: 1px solid #6c14d0;
+            padding: 20px 25px;
+            border-radius: 5px;
+            margin: 15px;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.6);
+
+            >.card_top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                >.profile {
+                    display: flex;
+                    align-items: center;
+
+
+                    >.profile_image {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        margin: 5px 0;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+                        cursor: pointer;
+                        transition: 0.3s;
+
+
+
+
+                        >img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+
+
+                        }
+                    }
+
+                    >.name {
+                        margin-left: 20px;
+                        line-height: 22px;
+
+                        >strong {
+
+                            font-size: 20px;
+                        }
+
+                        >.like {
+
+                            >svg {
+                                fill: orange;
+                                height: 15px;
+                            }
+                        }
+                    }
+
+
+
+
+                }
+
+                >.profile:hover .profile_image {
+                    transform: scale(1.2);
+                }
+            }
+
+            >.comment {
+                >p {
+                    text-align: justify;
+                    line-height: 22px;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+
+}
+
+/*==============================================================REVIEW=============================================================*/
+/*==================================================================================================================================*/
+
+.services {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 80px 0 10px 0;
+
+    >h1 {
+        font-size: 60px;
+        text-transform: uppercase;
+
+        >span {
+            margin-left: 15px;
+            background: linear-gradient(to right, #c72092, #6c14d0);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    >.services_card {
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        top: 50px;
+
+        >.services_box {
+
+            >svg {
+                font-size: 60px;
+                fill: orange;
+                margin: 20px 0;
+                cursor: pointer;
+            }
+
+            >h3 {
+                margin-bottom: 10px;
+                font-size: 19px;
+
+            }
+
+            >p {
+                text-align: center;
+                color: grey;
+                margin-bottom: 60px;
+            }
+        }
+    }
+}
+
+/*==============================================================LOGIN=============================================================*/
+/*==================================================================================================================================*/
+::-webkit-input-placeholder {
+    color: #6c14d0;
+    opacity: 0.5;
+}
+
+.login_form {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url(./imgs/login/b1a9ea53-d966-4fe5-b981-a19b647a0db5.svg);
+    background-repeat: cover;
+    background-position: center;
+
+    >.left {
+
+        >img {
+            width: 900px;
+            transform: scaleX(-1);
+
+        }
+    }
+
+    >.right {
+        backdrop-filter: blur(12px);
+        border-radius: 23px;
+        border: 1px solid #6c14d0;
+        width: 400px;
+        position: relative;
+        padding: 50px 80px;
+
+        /*no le ponemos top left por qufuncionaba bien*/
+        >h1 {
+
+            font-family: prevattscriptssk;
+            font-size: 45px;
+            margin-bottom: 40px;
+            text-align: center;
+
+
+        }
+
+        >p {
+            margin-bottom: 5px;
+        }
+
+        & .user {
+            position: relative;
+            left: 20px;
+            border: 1px solid #6c14d0;
+            border-radius: 23px;
+            width: 200px;
+            height: 40px;
+            display: flex;
+
+            >svg {
+                position: absolute;
+                margin-left: 10px;
+                width: 20px;
+                height: 20px;
+                margin-top: 9px;
+                fill: #c72092;
+            }
+
+            >.username {
+                position: relative;
+                background: none;
+                outline: none;
+                border: none;
+                display: flex;
+                font-size: 15px;
+                text-align: center;
+
+            }
+        }
+
+        & .password_tag {
+            margin: 15px 0 5px 0;
+        }
+
+        & .password {
+            position: relative;
+            left: 20px;
+            border: 1px solid #6c14d0;
+            border-radius: 23px;
+            width: 200px;
+            height: 40px;
+            display: flex;
+
+
+            >svg {
+                position: relative;
+                margin-left: 10px;
+                width: 17px;
+                height: 23px;
+                margin-top: 9px;
+                fill: #6c14d0;
+
+            }
+
+            >input {
+                width: 100px;
+                left: 9%;
+                position: relative;
+                background: none;
+                outline: none;
+                border: none;
+                display: flex;
+                font-size: 15px;
+                text-align: center;
+            }
+        }
+
+        & .forget {
+
+            position: relative;
+            left: 90px;
+            margin: 6px 0 10px 0;
+            cursor: pointer;
+        }
+
+        & button {
+            position: relative;
+            left: 20px;
+            width: 200px;
+            padding: 7px 20px;
+            color: white;
+            border: none;
+            border-radius: 23px;
+            font-size: 20px;
+            cursor: pointer;
+            background: linear-gradient(to right, #6c14d0, #c72092);
+        }
+
+        & .login_icon {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 25px;
+
+            >a {
+                width: min-content;
+                height: min-content;
+                margin: 0 2px;
+                border-radius: 50%;
+                box-shadow: 0 0 0 0 0.6;
+
+                >img {
+                    width: 50px;
+                    margin: 5px 5px;
+
+                }
+            }
+        }
+
+
+
+    }
+
+}
+
+
+/*==============================================================Footer=============================================================*/
+/*==================================================================================================================================*/
+
+footer {
+    width: 100%;
+    background-color: #6c14d0;
+
+    .footer_main {
+        width: 100%;
+        background: #f3f1f1;
+        display: flex;
+        justify-content: space-around;
+
+        .tag {
+            margin: 10px 0;
+
+            .center {
+                text-align: center;
+            }
+
+            h1 {
+                font-size: 25px;
+                margin: 25px;
+                color: black;
+            }
+
+            >a {
+                display: block;
+                color: black;
+                text-decoration: none;
+                margin: 9px 0;
+            }
+
+            svg {
+                height: 40px;
+                width: 40px;
+                fill: black;
+                padding: o 10px;
+                transition: 0.3s;
+            }
+
+            svg:hover {
+                fill: #c72092;
+            }
+
+
+
+            .social_link {
+                display: inline
+            }
+
+            .search_bar {
+                color: antiquewhite;
+                width: 230px;
+                height: 30px;
+                background: #9000ff;
+                border-radius: 25px;
+
+                ::-webkit-input-placeholder {
+                    color: rgb(255, 255, 255);
+                }
+
+                >input {
+                    color: wheat;
+                    width: 200px;
+                    padding: 2px 0;
+                    position: relative;
+                    top: 17%;
+                    left: 6%;
+                    border: none;
+                    background: none;
+                    outline: none;
+                    font-size: 13px;
+
+
+                }
+
+
+
+                >button {
+                    padding: 7px 15px;
+                    background: linear-gradient(to right, #6c14d0, #c72092);
+                    border: none;
+                    margin-top: 15px;
+                    border-radius: 25px;
+                    color: white;
+                    cursor: pointer;
+                }
+
+
+            }
+
+
+
+
+
+
+
+
+
+        }
+    }
+
 }
